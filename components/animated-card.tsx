@@ -30,6 +30,7 @@ export function AnimatedCard({
     <motion.div
       ref={ref}
       className={`${variantClasses[variant]} rounded-lg p-6 backdrop-blur-md ${className}`}
+      style={{ willChange: 'transform' }}
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
       animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
       transition={{

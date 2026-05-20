@@ -3,30 +3,17 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { SmoothScroll } from '@/components/smooth-scroll'
+import { ThemeProvider } from '@/components/theme-provider'
+import { FloatingActions } from '@/components/floating-actions'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Premium Portfolio',
-  description: 'A developer & marketer crafting digital excellence',
-  generator: 'v0.app',
+  title: 'Md Mohsin | Software Engineer & Full-Stack Developer',
+  description: 'Portfolio of Md Mohsin, a Software Engineering M.Sc. candidate and Full-Stack Developer specializing in high-performance web systems and conversion-optimized digital growth strategy.',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/favicon.ico',
   },
 }
 
@@ -36,12 +23,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className="font-sans antialiased bg-background">
-        <SmoothScroll />
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SmoothScroll />
+          {children}
+          <FloatingActions />
+          {process.env.NODE_ENV === 'production' && <Analytics />}
+        </ThemeProvider>
       </body>
     </html>
   )
 }
+

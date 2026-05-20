@@ -4,53 +4,65 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Premium Dark Luxury Theme */
-  --background: oklch(0.06 0 0);
-  --background-secondary: oklch(0.08 0.01 280);
-  --foreground: oklch(0.95 0.01 0);
-  --card: oklch(0.09 0.02 280);
-  --card-foreground: oklch(0.95 0.01 0);
-  --popover: oklch(0.12 0.02 280);
-  --popover-foreground: oklch(0.95 0.01 0);
+  /* Premium Dark Luxury Theme - Warm Luxury (Earthy & Sophisticated) */
+  --background: #F4F1EA;
+  --background-secondary: #EAE5D9;
+  --foreground: #2C2621;
+  --card: #FAF8F5;
+  --card-foreground: #2C2621;
+  --popover: #FAF8F5;
+  --popover-foreground: #2C2621;
   
-  /* Primary: Electric Blue/Purple */
-  --primary: oklch(0.55 0.25 280);
-  --primary-foreground: oklch(0.95 0 0);
+  /* Primary: Premium Dark Satin Gold */
+  --primary: #96722B;
+  --primary-foreground: #FFFFFF;
   
-  /* Secondary: Deep Purple */
-  --secondary: oklch(0.4 0.2 300);
-  --secondary-foreground: oklch(0.95 0.01 0);
+  /* Secondary: Espresso Cards / Dividers */
+  --secondary: #EAE5D9;
+  --secondary-foreground: #2C2621;
   
-  /* Accent: Bright Cyan */
-  --accent: oklch(0.65 0.2 200);
-  --accent-foreground: oklch(0.06 0 0);
+  /* Accent: Premium Dark Satin Gold */
+  --accent: #96722B;
+  --accent-foreground: #FFFFFF;
   
-  --muted: oklch(0.25 0.02 280);
-  --muted-foreground: oklch(0.65 0.05 280);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.95 0.01 0);
-  --border: oklch(0.15 0.05 280);
-  --input: oklch(0.12 0.03 280);
-  --ring: oklch(0.55 0.25 280);
+  --muted: #EAE5D9;
+  --muted-foreground: #5C5249;
+  --destructive: #ef4444;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(44, 38, 33, 0.15);
+  --input: #FAF8F5;
+  --ring: #96722B;
   
-  --chart-1: oklch(0.65 0.2 200);
-  --chart-2: oklch(0.55 0.25 280);
-  --chart-3: oklch(0.6 0.22 260);
-  --chart-4: oklch(0.7 0.15 180);
-  --chart-5: oklch(0.5 0.2 320);
+  --chart-1: #96722B;
+  --chart-2: #C6A664;
+  --chart-3: #2C2621;
+  --chart-4: #a78bfa;
+  --chart-5: #f43f5e;
   
   --radius: 0.625rem;
-  --sidebar: oklch(0.08 0.02 280);
-  --sidebar-foreground: oklch(0.95 0.01 0);
-  --sidebar-primary: oklch(0.55 0.25 280);
-  --sidebar-primary-foreground: oklch(0.95 0 0);
-  --sidebar-accent: oklch(0.65 0.2 200);
-  --sidebar-accent-foreground: oklch(0.06 0 0);
-  --sidebar-border: oklch(0.15 0.05 280);
-  --sidebar-ring: oklch(0.55 0.25 280);
+  --sidebar: #EAE5D9;
+  --sidebar-foreground: #2C2621;
+  --sidebar-primary: #96722B;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #FAF8F5;
+  --sidebar-accent-foreground: #2C2621;
+  --sidebar-border: rgba(44, 38, 33, 0.1);
+  --sidebar-ring: #96722B;
+  
+  /* Dynamic Gradients, Meshes & Glows for Light Mode */
+  --gradient-text-bg: linear-gradient(135deg, #96722B 0%, #C6A664 50%, #2C2621 100%);
+  --mesh-gradient-bg: 
+    radial-gradient(circle at 25% 25%, rgba(150, 114, 43, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(44, 38, 33, 0.04) 0%, transparent 50%);
+  --glow-effect-shadow: 0 0 20px rgba(150, 114, 43, 0.18);
+  --glow-primary-shadow: 0 0 30px rgba(150, 114, 43, 0.22);
+  --glow-accent-shadow: 0 0 25px rgba(150, 114, 43, 0.2);
+  --pulse-glow-0: 0 0 30px rgba(150, 114, 43, 0.18);
+  --pulse-glow-50: 0 0 50px rgba(150, 114, 43, 0.28);
 }
 
 .dark {
+  /* Premium Dark Luxury Theme (Restore Original Dark Scheme) */
   --background: oklch(0.06 0 0);
   --background-secondary: oklch(0.08 0.01 280);
   --foreground: oklch(0.95 0.01 0);
@@ -72,11 +84,13 @@
   --border: oklch(0.15 0.05 280);
   --input: oklch(0.12 0.03 280);
   --ring: oklch(0.55 0.25 280);
+  
   --chart-1: oklch(0.65 0.2 200);
   --chart-2: oklch(0.55 0.25 280);
   --chart-3: oklch(0.6 0.22 260);
   --chart-4: oklch(0.7 0.15 180);
   --chart-5: oklch(0.5 0.2 320);
+  
   --sidebar: oklch(0.08 0.02 280);
   --sidebar-foreground: oklch(0.95 0.01 0);
   --sidebar-primary: oklch(0.55 0.25 280);
@@ -85,6 +99,17 @@
   --sidebar-accent-foreground: oklch(0.06 0 0);
   --sidebar-border: oklch(0.15 0.05 280);
   --sidebar-ring: oklch(0.55 0.25 280);
+  
+  /* Gradients, Meshes & Glows for Dark Mode */
+  --gradient-text-bg: linear-gradient(135deg, #55aaff 0%, #00c8ff 50%, #7c3aed 100%);
+  --mesh-gradient-bg: 
+    radial-gradient(circle at 25% 25%, oklch(0.55 0.25 280 / 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, oklch(0.65 0.2 200 / 0.1) 0%, transparent 50%);
+  --glow-effect-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+  --glow-primary-shadow: 0 0 30px rgba(85, 170, 255, 0.4);
+  --glow-accent-shadow: 0 0 25px rgba(0, 200, 255, 0.35);
+  --pulse-glow-0: 0 0 30px rgba(138, 43, 226, 0.3);
+  --pulse-glow-50: 0 0 50px rgba(138, 43, 226, 0.5);
 }
 
 @theme inline {
@@ -142,28 +167,26 @@
 
 @layer components {
   .glow-effect {
-    @apply shadow-[0_0_20px_rgba(138,43,226,0.3)];
+    box-shadow: var(--glow-effect-shadow);
   }
   
   .glow-primary {
-    @apply shadow-[0_0_30px_rgba(85,170,255,0.4)];
+    box-shadow: var(--glow-primary-shadow);
   }
   
   .glow-accent {
-    @apply shadow-[0_0_25px_rgba(0,200,255,0.35)];
+    box-shadow: var(--glow-accent-shadow);
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, #55aaff 0%, #00c8ff 50%, #7c3aed 100%);
+    background: var(--gradient-text-bg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .mesh-gradient {
-    background: 
-      radial-gradient(circle at 25% 25%, oklch(0.55 0.25 280 / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, oklch(0.65 0.2 200 / 0.1) 0%, transparent 50%);
+    background: var(--mesh-gradient-bg);
   }
 }
 
@@ -179,11 +202,11 @@
 @keyframes pulse-glow {
   0%, 100% {
     opacity: 1;
-    box-shadow: 0 0 30px rgba(138, 43, 226, 0.3);
+    box-shadow: var(--pulse-glow-0);
   }
   50% {
     opacity: 0.7;
-    box-shadow: 0 0 50px rgba(138, 43, 226, 0.5);
+    box-shadow: var(--pulse-glow-50);
   }
 }
 
