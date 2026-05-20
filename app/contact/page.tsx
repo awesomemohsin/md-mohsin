@@ -25,28 +25,28 @@ export default function ContactPage() {
     {
       type: 'linkedin',
       label: 'LinkedIn Profile',
-      value: 'linkedin.com/in/md-mohsin5',
+      value: 'Md. Mohsin',
       href: 'https://www.linkedin.com/in/md-mohsin5',
       glowColor: 'hover:border-[#0A66C2]/40'
     },
     {
       type: 'facebook',
       label: 'Facebook Profile',
-      value: 'facebook.com/muhammad.mohsin.0033',
+      value: 'Muhammad Mohsin',
       href: 'https://www.facebook.com/muhammad.mohsin.0033/',
       glowColor: 'hover:border-[#1877F2]/40'
     },
     {
       type: 'messenger',
       label: 'Facebook Messenger',
-      value: 'm.me/muhammad.mohsin.0033',
+      value: 'Muhammad Mohsin',
       href: 'https://m.me/muhammad.mohsin.0033',
       glowColor: 'hover:border-[#0084FF]/40'
     },
     {
       type: 'github',
       label: 'GitHub Profile',
-      value: 'github.com/awesomemohsin',
+      value: 'Md. Mohsin',
       href: 'https://github.com/awesomemohsin',
       glowColor: 'hover:border-foreground/40'
     },

@@ -13,25 +13,25 @@ export default function Home() {
   const projects = [
     {
       title: 'Parle Bangladesh',
-      description: 'Premium digital showcase and brand experience for the iconic snack brand in Bangladesh, representing the original Parle Products of India with high-fidelity performance and animations.',
-      tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Premium Brand UI'],
+      description: 'Official E-Commerce Store of Parle Bangladesh. A premium digital showcase and brand experience for the iconic snack brand in Bangladesh, representing the original Parle Products of India with high-fidelity performance and animations.',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Premium Brand UI'],
       link: 'https://parlebangladesh.com',
       image: 'https://api.microlink.io/?url=https%3A%2F%2Fparlebangladesh.com%2F&screenshot=true&embed=screenshot.url',
     },
     {
-      title: 'Delta Software & Communication',
+      title: 'Delta Software & Communication Ltd.',
       description: 'High-performance digital portal for a premier Internet Service Provider (ISP), delivering robust connectivity and subscription systems for home, corporate, and enterprise client solutions.',
-      tags: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'ISP Solutions'],
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'ISP Solutions'],
       link: 'https://www.deltasoftwareandcommunication.com',
       image: 'https://api.microlink.io/?url=https%3A%2F%2Fwww.deltasoftwareandcommunication.com%2F&screenshot=true&embed=screenshot.url',
     },
   ]
 
   const skills = [
-    { category: 'Frontend Engineering', items: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'TypeScript'] },
+    { category: 'Frontend Engineering', items: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Premium Brand UI'] },
     { category: 'Backend & Cloud Systems', items: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'REST APIs', 'Cloud Services'] },
     { category: 'Professional & Systems', items: ['Git & GitHub', 'System Architecture', 'UI/UX Design', 'Performance Optimization'] },
-    { category: 'Digital Marketing & Growth', items: ['Search Engine Optimization (SEO)', 'Google Analytics & GTM', 'Search Engine Marketing (SEM)', 'Conversion Rate Optimization (CRO)', 'Content & Growth Strategy'] },
+    { category: 'Digital Marketing & Growth', items: ['Strategical Campaigns on Meta', 'Google Ads Campaigns', 'Search Engine Optimization (SEO)', 'Conversion Rate Optimization (CRO)', 'Content & Growth Strategy'] },
   ]
 
   return (
@@ -59,6 +59,7 @@ export default function Home() {
               I combine robust full-stack software engineering, conversion-focused digital marketing strategies, and highly interactive user interfaces to build breathtaking, high-performance digital platforms.
             </p>
           </motion.div>
+
 
           {/* Skills Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -263,9 +264,37 @@ export default function Home() {
                   </div>
                   <div className="text-xs text-foreground/50 uppercase tracking-wider font-semibold mb-1">Facebook</div>
                   <div className="font-bold text-foreground group-hover:text-primary transition-colors text-sm sm:text-base truncate">
-                    muhammad.mohsin.0033
+                    Muhammad Mohsin
                   </div>
                   <div className="text-xs text-[#1877F2] font-bold uppercase tracking-wider mt-3 flex items-center gap-1">
+                    Connect ↗
+                  </div>
+                </AnimatedCard>
+              </a>
+
+              {/* LinkedIn Card */}
+              <a
+                href="https://www.linkedin.com/in/md-mohsin5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <AnimatedCard variant="glow" className="h-full hover:border-[#0A66C2]/40 transition-all duration-300 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <svg className="w-16 h-16 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                  </div>
+                  <div className="text-3xl mb-4">
+                    <svg className="w-8 h-8 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                  </div>
+                  <div className="text-xs text-foreground/50 uppercase tracking-wider font-semibold mb-1">LinkedIn</div>
+                  <div className="font-bold text-foreground group-hover:text-primary transition-colors text-sm sm:text-base truncate">
+                    Md. Mohsin
+                  </div>
+                  <div className="text-xs text-[#0A66C2] font-bold uppercase tracking-wider mt-3 flex items-center gap-1">
                     Connect ↗
                   </div>
                 </AnimatedCard>
@@ -291,7 +320,7 @@ export default function Home() {
                   </div>
                   <div className="text-xs text-foreground/50 uppercase tracking-wider font-semibold mb-1">GitHub</div>
                   <div className="font-bold text-foreground group-hover:text-primary transition-colors text-sm sm:text-base truncate">
-                    awesomemohsin
+                    Md. Mohsin
                   </div>
                   <div className="text-xs text-foreground font-bold uppercase tracking-wider mt-3 flex items-center gap-1">
                     Explore ↗
@@ -299,33 +328,6 @@ export default function Home() {
                 </AnimatedCard>
               </a>
 
-              {/* LinkedIn Card */}
-              <a
-                href="https://www.linkedin.com/in/md-mohsin5"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block"
-              >
-                <AnimatedCard variant="glow" className="h-full hover:border-[#0A66C2]/40 transition-all duration-300 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
-                    <svg className="w-16 h-16 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </div>
-                  <div className="text-3xl mb-4">
-                    <svg className="w-8 h-8 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </div>
-                  <div className="text-xs text-foreground/50 uppercase tracking-wider font-semibold mb-1">LinkedIn</div>
-                  <div className="font-bold text-foreground group-hover:text-primary transition-colors text-sm sm:text-base truncate">
-                    md-mohsin5
-                  </div>
-                  <div className="text-xs text-[#0A66C2] font-bold uppercase tracking-wider mt-3 flex items-center gap-1">
-                    Connect ↗
-                  </div>
-                </AnimatedCard>
-              </a>
             </div>
 
             {/* General Get In Touch Button in the bottom of WhatsApp and Email and direct form */}
@@ -345,22 +347,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6 text-foreground/50 text-sm">
             <p suppressHydrationWarning>© {new Date().getFullYear()} Md Mohsin. All rights reserved.</p>
             <div className="flex flex-wrap justify-center sm:justify-end gap-6 font-medium">
-              <a
-                href="https://github.com/awesomemohsin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors duration-300"
-              >
-                GitHub
-              </a>
-              <a
-                href="https://www.linkedin.com/in/md-mohsin5"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors duration-300"
-              >
-                LinkedIn
-              </a>
+
               <a
                 href="https://www.facebook.com/muhammad.mohsin.0033/"
                 target="_blank"
@@ -370,10 +357,27 @@ export default function Home() {
                 Facebook
               </a>
               <a
+                href="https://www.linkedin.com/in/md-mohsin5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors duration-300"
+              >
+                LinkedIn
+              </a>
+
+              <a
                 href="mailto:mdmohsin.work@gmail.com"
                 className="hover:text-primary transition-colors duration-300"
               >
                 Email
+              </a>
+              <a
+                href="https://github.com/awesomemohsin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors duration-300"
+              >
+                GitHub
               </a>
             </div>
           </div>
