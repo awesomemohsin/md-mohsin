@@ -217,7 +217,7 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-10 text-left">
               {/* WhatsApp Card */}
               <a
-                href="https://wa.me/8801881169880"
+                href="https://wa.me/8801958113265"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block"
@@ -235,7 +235,7 @@ export default function Home() {
                   </div>
                   <div className="text-xs text-foreground/50 uppercase tracking-wider font-semibold mb-1">WhatsApp</div>
                   <div className="font-bold text-foreground group-hover:text-primary transition-colors text-sm sm:text-base truncate">
-                    +8801881169880
+                    +8801958113265
                   </div>
                   <div className="text-xs text-[#25D366] font-bold uppercase tracking-wider mt-3 flex items-center gap-1">
                     Chat Directly ↗
@@ -374,12 +374,6 @@ export default function Home() {
                 className="hover:text-primary transition-colors duration-300"
               >
                 Email
-              </a>
-              <a
-                href="tel:+8801881169880"
-                className="hover:text-primary transition-colors duration-300"
-              >
-                Phone
               </a>
             </div>
           </div>

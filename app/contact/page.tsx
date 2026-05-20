@@ -9,25 +9,18 @@ import { GradientText } from '@/components/gradient-text'
 export default function ContactPage() {
   const contactInfo = [
     {
+      type: 'whatsapp',
+      label: 'WhatsApp Chat',
+      value: '+8801958113265',
+      href: 'https://wa.me/8801958113265',
+      glowColor: 'hover:border-[#25D366]/40'
+    },
+    {
       type: 'email',
       label: 'Direct Email',
       value: 'mdmohsin.work@gmail.com',
       href: 'mailto:mdmohsin.work@gmail.com',
       glowColor: 'hover:border-primary/40'
-    },
-    {
-      type: 'phone',
-      label: 'Phone Call',
-      value: '+8801881169880',
-      href: 'tel:+8801881169880',
-      glowColor: 'hover:border-[#EAB308]/40'
-    },
-    {
-      type: 'whatsapp',
-      label: 'WhatsApp Chat',
-      value: '+8801881169880',
-      href: 'https://wa.me/8801881169880',
-      glowColor: 'hover:border-[#25D366]/40'
     },
     {
       type: 'linkedin',
@@ -37,18 +30,25 @@ export default function ContactPage() {
       glowColor: 'hover:border-[#0A66C2]/40'
     },
     {
-      type: 'github',
-      label: 'GitHub Profile',
-      value: 'github.com/awesomemohsin',
-      href: 'https://github.com/awesomemohsin',
-      glowColor: 'hover:border-foreground/40'
-    },
-    {
       type: 'facebook',
       label: 'Facebook Profile',
       value: 'facebook.com/muhammad.mohsin.0033',
       href: 'https://www.facebook.com/muhammad.mohsin.0033/',
       glowColor: 'hover:border-[#1877F2]/40'
+    },
+    {
+      type: 'messenger',
+      label: 'Facebook Messenger',
+      value: 'm.me/muhammad.mohsin.0033',
+      href: 'https://m.me/muhammad.mohsin.0033',
+      glowColor: 'hover:border-[#0084FF]/40'
+    },
+    {
+      type: 'github',
+      label: 'GitHub Profile',
+      value: 'github.com/awesomemohsin',
+      href: 'https://github.com/awesomemohsin',
+      glowColor: 'hover:border-foreground/40'
     },
   ]
 
@@ -58,12 +58,6 @@ export default function ContactPage() {
         return (
           <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-        )
-      case 'phone':
-        return (
-          <svg className="w-8 h-8 text-[#EAB308]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
         )
       case 'whatsapp':
@@ -76,6 +70,24 @@ export default function ContactPage() {
         return (
           <svg className="w-8 h-8 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        )
+      case 'messenger':
+        return (
+          <svg className="w-8 h-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="contactMessengerGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#006AFF" />
+                <stop offset="50%" stopColor="#A133FF" />
+                <stop offset="100%" stopColor="#FF5C87" />
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#contactMessengerGrad)"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M12 2C6.38 2 2 6.13 2 11.5c0 2.92 1.28 5.51 3.32 7.31.17.15.27.37.26.6l-.08 2.25c-.02.5.47.88.94.71l2.48-.91c.18-.07.39-.06.57.02 1.55.66 3.28 1.02 5.09 1.02 5.62 0 10-4.13 10-9.5S17.62 2 12 2zm1.24 11.88l-2.42-2.58-4.73 2.58 5.2-5.53 2.47 2.58 4.68-2.58-5.2 5.53z"
+            />
           </svg>
         )
       case 'github':
