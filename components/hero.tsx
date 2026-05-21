@@ -163,16 +163,15 @@ export function Hero() {
               whileHover={{ scale: 1.05, y: -1 }}
               className="inline-block px-3 py-1 rounded-xl bg-primary/10 border border-primary/20 dark:bg-primary/20 dark:border-primary/30 text-primary dark:text-primary-foreground font-black tracking-tight text-lg sm:text-xl cursor-default transition-all duration-300 shadow-sm hover:shadow-[0_2px_10px_rgba(150,114,43,0.15)]"
             >
-              Full-Stack
+              Full-Stack Platforms
             </motion.span>{' '}
             &amp;{' '}
             <motion.span
               whileHover={{ scale: 1.05, y: -1 }}
               className="inline-block px-3 py-1 rounded-xl bg-accent/10 border border-accent/20 dark:bg-accent/20 dark:border-accent/30 text-accent dark:text-[#00c8ff] font-black tracking-tight text-lg sm:text-xl cursor-default transition-all duration-300 shadow-sm hover:shadow-[0_2px_10px_rgba(85,170,255,0.15)]"
             >
-              Growth-Optimized
-            </motion.span>{' '}
-            Systems
+              High-Conversion Growth Engines
+            </motion.span>
           </motion.h2>
 
           {/* Premium description card overlay */}
@@ -180,7 +179,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-sm sm:text-base md:text-lg text-foreground/75 mb-8 max-w-2xl leading-relaxed font-normal text-left border-l-2 border-primary/20 dark:border-accent/20 pl-4 py-1 bg-gradient-to-r from-primary/[0.02] to-transparent"
           >
-            <strong className="font-semibold text-foreground dark:text-white">M.Sc. in Software Engineering</strong> candidate specializing in <strong className="font-semibold text-primary dark:text-[#C6A664]">Full-Stack Development</strong> and <strong className="font-semibold text-accent dark:text-[#00c8ff]">Digital Growth Strategy</strong>. I craft elegant corporate platforms, high-performance web systems, and conversion-optimized digital experiences.
+            An <strong className="font-semibold text-foreground dark:text-white">M.Sc. in Software Engineering</strong> candidate specializing in architecting <strong className="font-semibold text-primary dark:text-[#C6A664]">ultra-fast, secure full-stack systems</strong> and <strong className="font-semibold text-accent dark:text-[#00c8ff]">conversion-driven growth strategies</strong>. I build bespoke corporate platforms and highly optimized web engines engineered to dominate search results and turn traffic into recurring revenue.
           </motion.p>
 
           <motion.div
@@ -202,8 +201,8 @@ export function Hero() {
           >
             {[
               { label: 'Completed Works', value: '15+', color: 'text-primary' },
-              { label: 'Academic Years', value: '5+', color: 'text-accent' },
-              { label: 'M.Sc. Student', value: 'DIU', color: 'text-foreground' },
+              { label: 'Academic Years', value: '7+', color: 'text-accent' },
+              { label: 'Years Experience', value: '3+', color: 'text-foreground' },
             ].map((stat, i) => (
               <div key={i} className="text-center lg:text-left group/stat">
                 <div className={`text-2xl sm:text-3.5xl font-black mb-1.5 transition-transform duration-300 group-hover/stat:translate-y-[-2px] ${stat.color}`}>

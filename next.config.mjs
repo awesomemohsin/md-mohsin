@@ -11,8 +11,6 @@ const nextConfig = {
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
   reactStrictMode: true,
-  swcMinify: true,
-  optimizeFonts: true,
   headers: async () => {
     return [
       {

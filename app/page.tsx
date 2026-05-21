@@ -8,6 +8,7 @@ import { useState } from 'react'
 import { AnimatedCard } from '@/components/animated-card'
 import { GradientText } from '@/components/gradient-text'
 import { AnimatedButton } from '@/components/animated-button'
+import { Code2, Server, Cpu, LineChart, Sparkles, Terminal, Cloud, Network, Figma, Gauge, Link2, Search, TrendingUp, Rocket } from 'lucide-react'
 
 export default function Home() {
   const projects = [
@@ -28,10 +29,164 @@ export default function Home() {
   ]
 
   const skills = [
-    { category: 'Frontend Engineering', items: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Premium Brand UI'] },
-    { category: 'Backend & Cloud Systems', items: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'REST APIs', 'Cloud Services'] },
-    { category: 'Professional & Systems', items: ['Git & GitHub', 'System Architecture', 'UI/UX Design', 'Performance Optimization'] },
-    { category: 'Digital Marketing & Growth', items: ['Strategical Campaigns on Meta', 'Google Ads Campaigns', 'Search Engine Optimization (SEO)', 'Conversion Rate Optimization (CRO)', 'Content & Growth Strategy'] },
+    {
+      category: 'Frontend Engineering',
+      icon: <Code2 className="w-6 h-6 text-amber-500" />,
+      color: 'from-amber-500/10 via-yellow-500/5 to-transparent',
+      description: 'Sculpting high-performance client architectures with pixel-perfect brand identity.',
+      items: [
+        {
+          name: 'Next.js',
+          icon: (
+            <svg className="w-4 h-4 text-foreground shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.892 18.01h-1.39l-4.524-6.398v6.398h-1.302v-8.257h1.39l4.524 6.397v-6.397h1.302v8.257zm-1.892-9.257c-.502 0-.91-.408-.91-.91s.408-.91.91-.91.91.408.91.91-.408.91-.91.91z" />
+            </svg>
+          )
+        },
+        {
+          name: 'TypeScript',
+          icon: (
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/1280px-Typescript.svg.png"
+              alt="TypeScript"
+              className="w-4 h-4 object-contain shrink-0"
+            />
+          )
+        },
+        {
+          name: 'Tailwind CSS',
+          icon: (
+            <svg className="w-4 h-4 text-[#38BDF8] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" />
+            </svg>
+          )
+        },
+        {
+          name: 'Framer Motion',
+          icon: (
+            <svg className="w-4 h-4 text-[#F024B6] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M0 0h12L24 12H12L0 24V12H12L0 0z" />
+            </svg>
+          )
+        },
+        {
+          name: 'Premium Brand UI',
+          icon: <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />
+        },
+      ],
+    },
+    {
+      category: 'Backend & Cloud Systems',
+      icon: <Server className="w-6 h-6 text-sky-500" />,
+      color: 'from-sky-500/10 via-indigo-500/5 to-transparent',
+      description: 'Developing rock-solid API services, database pipelines, and optimized cloud architectures.',
+      items: [
+        {
+          name: 'Node.js',
+          icon: (
+            <svg className="w-4 h-4 text-[#339933] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.996 0c-.628 0-1.238.163-1.782.477L2.433 4.966c-1.088.628-1.758 1.788-1.758 3.044V15.99c0 1.256.67 2.416 1.758 3.044l7.781 4.512c.544.314 1.154.477 1.782.477.628 0 1.238-.163 1.782-.477l7.781-4.512c1.088-.628 1.758-1.788 1.758-3.044V8.01c0-1.256-.67-2.416-1.758-3.044L13.778.477A3.564 3.564 0 0011.996 0zM12 3.197l6.702 3.888v7.776L12 18.749l-6.702-3.888V7.085L12 3.197z" />
+            </svg>
+          )
+        },
+        {
+          name: 'Express',
+          icon: <Terminal className="w-4 h-4 text-foreground/70 shrink-0" />
+        },
+        {
+          name: 'PostgreSQL',
+          icon: (
+            <svg className="w-4 h-4 text-[#336791] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 4.24 2 7v10c0 2.76 4.48 5 10 5s10-2.24 10-5V7c0-2.76-4.48-5-10-5zm8 5c0 1.66-3.58 3-8 3S4 8.66 4 7s3.58-3 8-3 8 1.34 8 3zm0 5c0 1.66-3.58 3-8 3s-8-1.34-8-3V9.64c1.9 1.44 5.37 2.36 8 2.36s6.1-1 8-2.36V12zm0 5c0 1.66-3.58 3-8 3s-8-1.34-8-3v-2.36c1.9 1.44 5.37 2.36 8 2.36s6.1-1 8-2.36V17z" />
+            </svg>
+          )
+        },
+        {
+          name: 'MongoDB',
+          icon: (
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ZYtHv2OLXmthRPbkmENZRXuqBVDwlsrZ1A&s"
+              alt="MongoDB"
+              className="w-4 h-4 object-contain shrink-0"
+            />
+          )
+        },
+        {
+          name: 'Cloud Services',
+          icon: <Cloud className="w-4 h-4 text-sky-400 shrink-0" />
+        },
+      ],
+    },
+    {
+      category: 'Professional & Systems',
+      icon: <Cpu className="w-6 h-6 text-indigo-500" />,
+      color: 'from-indigo-500/10 via-purple-500/5 to-transparent',
+      description: 'Configuring standard workflow pipelines, secure patterns, and absolute speed benchmarks.',
+      items: [
+        {
+          name: 'Git & GitHub',
+          icon: (
+            <svg className="w-4 h-4 text-[#F05032] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.546 10.93L13.07.45c-.6-.6-1.585-.6-2.185 0L8.08 3.26l3.6 3.6a3.292 3.292 0 11-1.285 1.286l-3.6-3.6-5.83 5.83c-.6.6-.6 1.585 0 2.185l10.476 10.476c.6.6 1.585.6 2.185 0l10.476-10.476c.6-.6.6-1.585 0-2.185z" />
+            </svg>
+          )
+        },
+        {
+          name: 'System Architecture',
+          icon: <Network className="w-4 h-4 text-indigo-400 shrink-0" />
+        },
+        {
+          name: 'UI/UX Design',
+          icon: <Figma className="w-4 h-4 text-pink-400 shrink-0" />
+        },
+        {
+          name: 'Performance Opt.',
+          icon: <Gauge className="w-4 h-4 text-amber-500 shrink-0" />
+        },
+        {
+          name: 'REST APIs',
+          icon: <Link2 className="w-4 h-4 text-teal-400 shrink-0" />
+        }
+      ],
+    },
+    {
+      category: 'Digital Growth',
+      icon: <LineChart className="w-6 h-6 text-emerald-500" />,
+      color: 'from-emerald-500/10 via-teal-500/5 to-transparent',
+      description: 'Executing conversion funnels, organic SEO campaigns, and performance ads to scale scale.',
+      items: [
+        {
+          name: 'Meta Campaigns',
+          icon: (
+            <svg className="w-4 h-4 text-[#1877F2] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          )
+        },
+        {
+          name: 'Google Ads',
+          icon: (
+            <img
+              src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Logo.width-500.format-webp.webp"
+              alt="Google Ads"
+              className="w-4 h-4 object-contain shrink-0"
+            />
+          )
+        },
+        {
+          name: 'SEO Engineering',
+          icon: <Search className="w-4 h-4 text-sky-400 shrink-0" />
+        },
+        {
+          name: 'Conversion Rate Opt.',
+          icon: <TrendingUp className="w-4 h-4 text-emerald-400 shrink-0" />
+        },
+        {
+          name: 'Growth Strategy',
+          icon: <Rocket className="w-4 h-4 text-orange-400 shrink-0" />
+        },
+      ],
+    },
   ]
 
   return (
@@ -64,17 +219,52 @@ export default function Home() {
           {/* Skills Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {skills.map((skill, i) => (
-              <AnimatedCard key={i} delay={i * 0.1} variant="glow">
-                <h3 className="text-lg font-bold text-primary mb-4 min-h-[56px] flex items-center">{skill.category}</h3>
-                <ul className="space-y-2.5">
-                  {skill.items.map((item, j) => (
-                    <li key={j} className="text-foreground/70 flex items-center gap-2.5 text-sm text-left">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </AnimatedCard>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="group relative flex flex-col justify-between rounded-3xl border border-border/40 bg-card/60 backdrop-blur-xl p-6 hover:bg-card/90 transition-all duration-500 overflow-hidden cursor-default hover:border-primary/20 hover:shadow-[0_4px_30px_rgba(0,0,0,0.15)]"
+              >
+                {/* Dynamic Gradient Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+
+                <div className="relative z-10">
+                  {/* Icon Container */}
+                  <div className="inline-flex items-center justify-center p-3 rounded-2xl bg-background/80 border border-border/80 shadow-inner mb-5 group-hover:scale-105 group-hover:border-primary/20 transition-all duration-300">
+                    {skill.icon}
+                  </div>
+
+                  {/* Category Title */}
+                  <h3 className="text-lg font-black text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                    {skill.category}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-xs text-foreground/50 leading-relaxed mb-6">
+                    {skill.description}
+                  </p>
+
+                  {/* Divider line */}
+                  <div className="h-[1px] bg-gradient-to-r from-border/60 via-border/20 to-transparent w-full mb-6" />
+
+                  {/* Skills List */}
+                  <ul className="space-y-3.5">
+                    {skill.items.map((item, j) => (
+                      <li key={j} className="flex items-center gap-3 text-sm group/li">
+                        <span className="flex items-center justify-center w-6 h-6 rounded-lg bg-background/60 border border-border/40 shadow-sm shrink-0 group-hover/li:border-primary/30 group-hover/li:bg-primary/5 transition-all duration-300">
+                          {item.icon}
+                        </span>
+                        <span className="font-semibold text-xs tracking-tight text-foreground/75 group-hover/li:text-foreground transition-colors">{item.name}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Corner decorative accent */}
+                <div className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full bg-primary/5 blur-xl group-hover:bg-primary/10 transition-all duration-300 pointer-events-none" />
+              </motion.div>
             ))}
           </div>
 
