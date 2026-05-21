@@ -19,7 +19,7 @@ export default function ProjectsPage() {
       title: 'Parle Bangladesh',
       description: 'A visually immersive brand platform and digital presence for Parle Bangladesh, presenting the premium snack brand from the original legacy of Parle Products of India. Built with high-fidelity fluid animations and performance architectures.',
       category: 'commerce',
-      tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Premium Brand UI', 'Snacks Showcase'],
+      tags: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Premium Brand', 'Snacks Showcase'],
       impact: 'Built a stunning product catalog and brand experience that elevated consumer engagement and online positioning for international snack lines.',
       role: 'Lead Front-End Architect',
       link: 'https://parlebangladesh.com/',
@@ -30,7 +30,7 @@ export default function ProjectsPage() {
       title: 'Delta Software & Communication',
       description: 'A feature-rich digital portal developed for a leading Internet Service Provider (ISP) in Bangladesh, showcasing robust broadband connectivity and custom subscription packages tailored for home, corporate, and enterprise-grade network solutions.',
       category: 'telecom',
-      tags: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'Enterprise ISP', 'Broadband Systems'],
+      tags: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Enterprise ISP', 'Broadband Systems'],
       impact: 'Designed customer subscription modules, interactive service coverage maps, and corporate inquiry workflows, elevating client lead generation.',
       role: 'Lead Web Architect & Developer',
       link: 'https://www.deltasoftwareandcommunication.com/',
@@ -38,8 +38,8 @@ export default function ProjectsPage() {
     },
   ]
 
-  const filtered = activeCategory === 'all' 
-    ? projects 
+  const filtered = activeCategory === 'all'
+    ? projects
     : projects.filter(p => p.category === activeCategory)
 
   const containerVariants = {
@@ -105,11 +105,10 @@ export default function ProjectsPage() {
               <motion.button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-lg capitalize font-bold text-xs uppercase tracking-wider transition-all duration-300 ${
-                  activeCategory === cat
-                    ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/30 border border-primary'
-                    : 'bg-card border border-border text-foreground hover:border-primary/50'
-                }`}
+                className={`px-4 py-2 rounded-lg capitalize font-bold text-xs uppercase tracking-wider transition-all duration-300 ${activeCategory === cat
+                  ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/30 border border-primary'
+                  : 'bg-card border border-border text-foreground hover:border-primary/50'
+                  }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -143,7 +142,7 @@ export default function ProjectsPage() {
                           <span className="w-2 h-2 rounded-full bg-[#FFBD2E] opacity-90 shadow-sm" />
                           <span className="w-2 h-2 rounded-full bg-[#27C93F] opacity-90 shadow-sm" />
                         </div>
-                        
+
                         {/* Interactive address bar that expands and links */}
                         <a
                           href={project.link}
@@ -159,7 +158,7 @@ export default function ProjectsPage() {
                             {project.link}
                           </span>
                         </a>
-                        
+
                         <div className="w-8" /> {/* alignment spacer */}
                       </div>
 
@@ -256,7 +255,7 @@ export default function ProjectsPage() {
                   <p className="text-foreground/70 text-sm leading-relaxed max-w-xl mb-6">
                     Beyond client case studies, I maintain active open-source utilities, full-stack packages, and developer helper scripts. Check out my GitHub repositories, contributions, and tools.
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-4 text-xs font-semibold text-foreground/60">
                     <span className="flex items-center gap-2 bg-background/50 border border-border/40 px-3 py-1.5 rounded-lg">
                       <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />

@@ -42,7 +42,7 @@ export default function AboutPage() {
   const achievements = [
     { icon: '🚀', label: 'Digital Growth', value: 'SEO / CRO' },
     { icon: '💻', label: 'Commercial Works', value: '15+' },
-    { icon: '🎓', label: 'Academic Years', value: '5+' },
+    { icon: '🎓', label: 'Academic Years', value: '7+' },
     { icon: '⭐', label: 'Client Satisfaction', value: '100%' },
   ]
 
@@ -62,7 +62,7 @@ export default function AboutPage() {
           >
             🧑‍💻 About Md Mohsin
           </motion.div>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
