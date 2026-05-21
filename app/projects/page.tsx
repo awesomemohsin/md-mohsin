@@ -11,7 +11,7 @@ import { AnimatedButton } from '@/components/animated-button'
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState('all')
 
-  const categories = ['all', 'telecom', 'commerce']
+  const categories = ['all', 'telecom', 'commerce', 'ecommerce']
 
   const projects = [
     {
@@ -35,6 +35,17 @@ export default function ProjectsPage() {
       role: 'Lead Web Architect & Developer',
       link: 'https://www.deltasoftwareandcommunication.com/',
       image: 'https://api.microlink.io/?url=https%3A%2F%2Fwww.deltasoftwareandcommunication.com%2F&screenshot=true&embed=screenshot.url',
+    },
+    {
+      id: 3,
+      title: 'Elanzo — Fashion E-Commerce',
+      description: 'A modern, high-performance fashion e-commerce storefront built for a premium clothing brand. Features a sleek product catalog, intuitive shopping experience, dynamic filtering, and a seamless checkout flow — all engineered for conversion and brand consistency.',
+      category: 'ecommerce',
+      tags: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'E-Commerce', 'Fashion', 'Vercel'],
+      impact: 'Delivered a fully functional storefront with smooth product browsing, cart management, and optimized UX — enhancing brand credibility and driving online sales.',
+      role: 'Lead Front-End Developer',
+      link: 'https://elanzo-ecommerce.vercel.app/',
+      image: 'https://api.microlink.io/?url=https%3A%2F%2Felanzo-ecommerce.vercel.app%2F&screenshot=true&embed=screenshot.url',
     },
   ]
 
