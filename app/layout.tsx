@@ -9,11 +9,37 @@ import { FloatingActions } from '@/components/floating-actions'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
+const siteUrl = 'https://md-mohsin.vercel.app'
+const ogImage = `https://api.microlink.io/?url=${siteUrl}&screenshot=true&meta=false&embed=screenshot.url&type=jpeg`
+
 export const metadata: Metadata = {
   title: 'Md Mohsin | Software Engineer & Full-Stack Developer',
   description: 'Portfolio of Md Mohsin, a Software Engineering M.Sc. candidate and Full-Stack Developer specializing in high-performance web systems and conversion-optimized digital growth strategy.',
+  metadataBase: new URL(siteUrl),
   icons: {
     icon: '/favicon.ico',
+  },
+  openGraph: {
+    title: 'Md Mohsin | Software Engineer & Full-Stack Developer',
+    description: 'Portfolio of Md Mohsin, a Software Engineering M.Sc. candidate and Full-Stack Developer specializing in high-performance web systems and conversion-optimized digital growth strategy.',
+    url: siteUrl,
+    siteName: 'Md Mohsin Portfolio',
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'Md Mohsin | Software Engineer & Full-Stack Developer',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Md Mohsin | Software Engineer & Full-Stack Developer',
+    description: 'Portfolio of Md Mohsin, a Software Engineering M.Sc. candidate and Full-Stack Developer specializing in high-performance web systems and conversion-optimized digital growth strategy.',
+    images: [ogImage],
   },
 }
 
