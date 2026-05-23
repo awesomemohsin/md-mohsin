@@ -57,31 +57,44 @@ export function Navbar() {
           }`}
         >
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-            <div className="flex items-center justify-between h-16 lg:h-[68px]">
+            <div className="relative flex items-center justify-between h-16 lg:h-[68px]">
 
               {/* ── Logo / Wordmark ── */}
-              <Link href="/" className="group flex-shrink-0">
+              <Link href="/" className="group flex-shrink-0 z-10">
                 <motion.div
                   className="flex items-center gap-2.5"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  {/* Monogram badge */}
-                  <div className="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-primary flex items-center justify-center shadow-md shadow-primary/25 group-hover:shadow-primary/40 transition-shadow duration-300 flex-shrink-0">
-                    <span className="text-primary-foreground font-black text-xs lg:text-sm tracking-tight leading-none select-none">
-                      MM
-                    </span>
+                  {/* Profile image (visible on both mobile and desktop) */}
+                  <div className="flex w-8 h-8 lg:w-9 lg:h-9 rounded-full overflow-hidden border border-primary/20 flex-shrink-0 shadow-md shadow-primary/10 transition-all duration-300 group-hover:border-primary/45 group-hover:shadow-primary/20">
+                    <img
+                      src="/profile.jpg"
+                      alt="Md. Mohsin"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  {/* Name wordmark */}
-                  <div className="flex flex-col leading-none">
-                    <span className="text-sm lg:text-base font-black tracking-tight text-foreground group-hover:text-primary transition-colors duration-300 select-none">
-                      Md. Mohsin
-                    </span>
-                    <span className="text-[9px] lg:text-[10px] font-semibold tracking-[0.12em] uppercase text-foreground/40 select-none mt-0.5">
-                      Software Engineer
-                    </span>
-                  </div>
+                  {/* Name wordmark styled as a premium signature (desktop only) */}
+                  <span 
+                    className="hidden md:inline-block text-3xl lg:text-4.5xl font-normal text-foreground group-hover:text-primary transition-all duration-300 select-none translate-y-[3px]"
+                    style={{ fontFamily: "var(--font-felipa), cursive" }}
+                  >
+                    Md. Mohsin
+                  </span>
                 </motion.div>
+              </Link>
+
+              {/* ── Center Wordmark (mobile only) ── */}
+              <Link 
+                href="/" 
+                className="md:hidden absolute left-1/2 top-[calc(50%+3px)] -translate-x-1/2 -translate-y-1/2 z-10 hover:opacity-80 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <span 
+                  className="text-3xl font-normal text-foreground select-none text-center leading-none"
+                  style={{ fontFamily: "var(--font-felipa), cursive" }}
+                >
+                  Md. Mohsin
+                </span>
               </Link>
 
               {/* ── Center Pill Nav (desktop) ── */}
