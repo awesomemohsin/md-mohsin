@@ -23,7 +23,7 @@ export default function ProjectsPage() {
       impact: 'Built a stunning product catalog and brand experience that elevated consumer engagement and online positioning for international snack lines.',
       role: 'Lead Front-End Architect',
       link: 'https://parlebangladesh.com/',
-      image: 'https://api.microlink.io/?url=https%3A%2F%2Fparlebangladesh.com%2F&screenshot=true&embed=screenshot.url',
+      image: '/screenshots/parle.png',
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ export default function ProjectsPage() {
       impact: 'Designed customer subscription modules, interactive service coverage maps, and corporate inquiry workflows, elevating client lead generation.',
       role: 'Lead Web Architect & Developer',
       link: 'https://www.deltasoftwareandcommunication.com/',
-      image: 'https://api.microlink.io/?url=https%3A%2F%2Fwww.deltasoftwareandcommunication.com%2F&screenshot=true&embed=screenshot.url',
+      image: '/screenshots/delta.png',
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
       impact: 'Delivered a fully functional storefront with smooth product browsing, cart management, and optimized UX — enhancing brand credibility and driving online sales.',
       role: 'Lead Front-End Developer',
       link: 'https://elanzo-ecommerce.vercel.app/',
-      image: 'https://api.microlink.io/?url=https%3A%2F%2Felanzo-ecommerce.vercel.app%2F&screenshot=true&embed=screenshot.url',
+      image: '/screenshots/elanzo.png',
     },
   ]
 
@@ -145,7 +145,7 @@ export default function ProjectsPage() {
                 <div>
                   {/* Website live preview frame */}
                   {project.image && (
-                    <div className="relative w-full h-56 sm:h-64 overflow-hidden bg-background-secondary/60 border-b border-border/30 flex flex-col justify-stretch p-3.5 pt-10">
+                    <div className="relative w-full h-72 sm:h-96 overflow-hidden bg-white border-b border-border/30 flex flex-col justify-stretch p-3.5 pt-10">
                       {/* Browser mockup header */}
                       <div className="absolute top-0 left-0 right-0 h-8 bg-card border-b border-border/20 flex items-center justify-between px-3.5 z-20 shadow-sm">
                         <div className="flex items-center gap-1.5">
@@ -179,7 +179,7 @@ export default function ProjectsPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         title={`Visit ${project.title} live website`}
-                        className="relative w-full h-full rounded overflow-hidden border border-border/30 shadow-md bg-card flex items-stretch cursor-pointer group/viewport"
+                        className="relative w-full h-full rounded overflow-hidden border border-border/30 shadow-md bg-white flex items-stretch cursor-pointer group/viewport"
                       >
                         <img
                           src={project.image}

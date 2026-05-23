@@ -159,20 +159,41 @@ export function Hero() {
             Engineering <span className="text-primary dark:text-[#C6A664] font-black underline decoration-primary/20 hover:decoration-primary/50 transition-all duration-300 cursor-default">Premium</span>,{' '}
             <span className="text-foreground dark:text-white font-black">High-Performance</span>{' '}
             <br className="hidden sm:inline" />
-            <motion.span
-              whileHover={{ scale: 1.05, y: -1 }}
-              className="inline-block px-3 py-1 rounded-xl bg-primary/10 border border-primary/20 dark:bg-primary/20 dark:border-primary/30 text-primary dark:text-primary-foreground font-black tracking-tight text-lg sm:text-xl cursor-default transition-all duration-300 shadow-sm hover:shadow-[0_2px_10px_rgba(150,114,43,0.15)]"
-            >
-              Full-Stack Platforms
-            </motion.span>{' '}
-            &amp;{' '}
-            <motion.span
-              whileHover={{ scale: 1.05, y: -1 }}
-              className="inline-block px-3 py-1 rounded-xl bg-accent/10 border border-accent/20 dark:bg-accent/20 dark:border-accent/30 text-accent dark:text-[#00c8ff] font-black tracking-tight text-lg sm:text-xl cursor-default transition-all duration-300 shadow-sm hover:shadow-[0_2px_10px_rgba(85,170,255,0.15)]"
-            >
-              High-Conversion Growth Engines
-            </motion.span>
+
+            {/* Mobile: stacked, centered, no & */}
+            <span className="flex sm:hidden flex-col items-center gap-2 mt-2">
+              <motion.span
+                whileHover={{ scale: 1.05, y: -1 }}
+                className="inline-block px-3 py-1 rounded-xl bg-primary/10 border border-primary/20 dark:bg-primary/20 dark:border-primary/30 text-primary dark:text-primary-foreground font-black tracking-tight text-lg cursor-default transition-all duration-300 shadow-sm hover:shadow-[0_2px_10px_rgba(150,114,43,0.15)]"
+              >
+                Full-Stack Platforms
+              </motion.span>
+              <motion.span
+                whileHover={{ scale: 1.05, y: -1 }}
+                className="inline-block px-3 py-1 rounded-xl bg-accent/10 border border-accent/20 dark:bg-accent/20 dark:border-accent/30 text-accent dark:text-[#00c8ff] font-black tracking-tight text-lg cursor-default transition-all duration-300 shadow-sm hover:shadow-[0_2px_10px_rgba(85,170,255,0.15)]"
+              >
+                High-Conversion Growth Engines
+              </motion.span>
+            </span>
+
+            {/* Desktop: inline with & */}
+            <span className="hidden sm:inline-flex flex-wrap gap-x-2 gap-y-2 items-center mt-1">
+              <motion.span
+                whileHover={{ scale: 1.05, y: -1 }}
+                className="inline-block px-3 py-1 rounded-xl bg-primary/10 border border-primary/20 dark:bg-primary/20 dark:border-primary/30 text-primary dark:text-primary-foreground font-black tracking-tight text-xl cursor-default transition-all duration-300 shadow-sm hover:shadow-[0_2px_10px_rgba(150,114,43,0.15)]"
+              >
+                Full-Stack Platforms
+              </motion.span>
+              <span>&amp;</span>
+              <motion.span
+                whileHover={{ scale: 1.05, y: -1 }}
+                className="inline-block px-3 py-1 rounded-xl bg-accent/10 border border-accent/20 dark:bg-accent/20 dark:border-accent/30 text-accent dark:text-[#00c8ff] font-black tracking-tight text-xl cursor-default transition-all duration-300 shadow-sm hover:shadow-[0_2px_10px_rgba(85,170,255,0.15)]"
+              >
+                High-Conversion Growth Engines
+              </motion.span>
+            </span>
           </motion.h2>
+
 
           {/* Premium description card overlay */}
           <motion.p

@@ -50,8 +50,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
-      <body className="font-sans antialiased bg-background">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <body className="font-sans antialiased bg-background" suppressHydrationWarning>
+        <ThemeProvider attribute="class" forcedTheme="light" disableTransitionOnChange>
           <SmoothScroll />
           {children}
           <FloatingActions />

@@ -17,14 +17,14 @@ export default function Home() {
       description: 'Official E-Commerce Store of Parle Bangladesh. A premium digital showcase and brand experience for the iconic snack brand in Bangladesh, representing the original Parle Products of India with high-fidelity performance and animations.',
       tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Premium Brand UI'],
       link: 'https://parlebangladesh.com',
-      image: 'https://api.microlink.io/?url=https%3A%2F%2Fparlebangladesh.com%2F&screenshot=true&embed=screenshot.url',
+      image: '/screenshots/parle.png',
     },
     {
       title: 'Delta Software & Communication Ltd.',
       description: 'High-performance digital portal for a premier Internet Service Provider (ISP), delivering robust connectivity and subscription systems for home, corporate, and enterprise client solutions.',
       tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'ISP Solutions'],
       link: 'https://www.deltasoftwareandcommunication.com',
-      image: 'https://api.microlink.io/?url=https%3A%2F%2Fwww.deltasoftwareandcommunication.com%2F&screenshot=true&embed=screenshot.url',
+      image: '/screenshots/delta.png',
     },
   ]
 
@@ -336,12 +336,12 @@ export default function Home() {
                           target="_blank"
                           rel="noopener noreferrer"
                           title={`Visit ${project.title} live website`}
-                          className="relative w-full h-full rounded-lg overflow-hidden border border-border/30 shadow-lg bg-card flex items-stretch cursor-pointer group/viewport"
+                          className="relative w-full h-full rounded-lg overflow-hidden border border-border/30 shadow-lg bg-white flex items-stretch cursor-pointer group/viewport"
                         >
                           <img
                             src={project.image}
                             alt={project.title}
-                            className="w-full h-full object-contain object-top group-hover:scale-[1.02] transition-all duration-700 ease-out"
+                            className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-all duration-700 ease-out"
                             loading="lazy"
                           />
                         </a>
