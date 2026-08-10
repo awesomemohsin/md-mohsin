@@ -16,6 +16,17 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: 1,
+      title: 'Circle Network',
+      description: 'A nationwide, high-performance digital portal built for Circle Network, one of the leading Internet Service Providers (ISP) in Bangladesh. Engineered with a clean corporate identity, interactive coverage area search, customer support modules, and customized home and corporate subscription package calculators.',
+      category: 'telecom',
+      tags: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Nationwide ISP', 'Broadband Services'],
+      impact: 'Implemented a seamless subscriber onboarding experience, interactive geographic network coverage maps, and integrated customer portals to streamline support and subscription inquiries.',
+      role: 'Lead Web Architect & Developer',
+      link: 'https://circlenetworkbd.net',
+      image: '/screenshots/circle.png',
+    },
+    {
+      id: 2,
       title: 'Parle Bangladesh',
       description: 'A visually immersive brand platform and digital presence for Parle Bangladesh, presenting the premium snack brand from the original legacy of Parle Products of India. Built with high-fidelity fluid animations and performance architectures.',
       category: 'commerce',
@@ -26,7 +37,7 @@ export default function ProjectsPage() {
       image: '/screenshots/parle.png',
     },
     {
-      id: 2,
+      id: 3,
       title: 'Delta Software & Communication',
       description: 'A feature-rich digital portal developed for a leading Internet Service Provider (ISP) in Bangladesh, showcasing robust broadband connectivity and custom subscription packages tailored for home, corporate, and enterprise-grade network solutions.',
       category: 'telecom',
@@ -37,7 +48,7 @@ export default function ProjectsPage() {
       image: '/screenshots/delta.png',
     },
     {
-      id: 3,
+      id: 4,
       title: 'Elanzo — Fashion E-Commerce',
       description: 'A modern, high-performance fashion e-commerce storefront built for a premium clothing brand. Features a sleek product catalog, intuitive shopping experience, dynamic filtering, and a seamless checkout flow — all engineered for conversion and brand consistency.',
       category: 'ecommerce',

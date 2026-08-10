@@ -13,6 +13,13 @@ import { Code2, Server, Cpu, LineChart, Sparkles, Terminal, Cloud, Network, Figm
 export default function Home() {
   const projects = [
     {
+      title: 'Circle Network',
+      description: 'Nationwide ISP platform for one of the leading Internet Service Providers in Bangladesh, featuring customized internet package lookup, dynamic coverage area tools, and seamless customer service interfaces.',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'ISP Solutions'],
+      link: 'https://circlenetworkbd.net',
+      image: '/screenshots/circle.png',
+    },
+    {
       title: 'Parle Bangladesh',
       description: 'Official E-Commerce Store of Parle Bangladesh. A premium digital showcase and brand experience for the iconic snack brand in Bangladesh, representing the original Parle Products of India with high-fidelity performance and animations.',
       tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Premium Brand UI'],
@@ -341,7 +348,7 @@ export default function Home() {
                           <img
                             src={project.image}
                             alt={project.title}
-                            className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-all duration-700 ease-out"
+                            className="w-full h-full object-contain object-top group-hover:scale-[1.02] transition-all duration-700 ease-out"
                             loading="lazy"
                           />
                         </a>
