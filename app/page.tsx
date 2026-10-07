@@ -329,80 +329,78 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16 max-w-6xl mx-auto items-start">
             {projects.map((project, i) => (
-              <AnimatedCard key={i} delay={i * 0.08} variant="gradient" className="overflow-hidden !p-0 group h-full flex flex-col justify-between">
-                <div>
-                  {/* Website live preview frame */}
-                  {project.image && (
-                    <div className="relative w-full h-44 sm:h-52 overflow-hidden bg-background-secondary/60 border-b border-border/30 flex flex-col justify-stretch p-3 pt-9">
-                      {/* Browser mockup header */}
-                      <div className="absolute top-0 left-0 right-0 h-7 bg-card border-b border-border/20 flex items-center justify-between px-3.5 z-20 shadow-sm">
-                        <div className="flex items-center gap-1.5">
-                          <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] opacity-90 shadow-sm" />
-                          <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] opacity-90 shadow-sm" />
-                          <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F] opacity-90 shadow-sm" />
-                        </div>
-
-                        {/* Interactive address bar that links to live website */}
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title={project.link}
-                          className="text-[10px] text-foreground/45 hover:text-primary font-mono truncate max-w-[180px] bg-background/60 hover:bg-background/90 px-3 py-0.5 rounded-full border border-border/20 hover:border-primary/30 shadow-inner transition-all duration-300 flex items-center gap-1 cursor-pointer"
-                        >
-                          <span className="truncate">
-                            {project.link.replace('https://', '').replace('www.', '')}
-                          </span>
-                        </a>
-
-                        <div className="w-6" /> {/* alignment spacer */}
+              <AnimatedCard key={i} delay={i * 0.08} variant="gradient" className="overflow-hidden !p-0 group flex flex-col border border-border/50 hover:border-primary/40 transition-colors duration-300">
+                {/* Website live preview frame */}
+                {project.image && (
+                  <div className="relative w-full overflow-hidden bg-background-secondary/60 border-b border-border/30 flex flex-col justify-stretch p-3 pt-9">
+                    {/* Browser mockup header */}
+                    <div className="absolute top-0 left-0 right-0 h-7 bg-card border-b border-border/20 flex items-center justify-between px-3.5 z-20 shadow-sm">
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] opacity-90 shadow-sm" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] opacity-90 shadow-sm" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F] opacity-90 shadow-sm" />
                       </div>
 
-                      {/* Screenshot viewport - Clickable link to live website */}
+                      {/* Interactive address bar that links to live website */}
                       <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        title={`Visit ${project.title} live website`}
-                        className="relative w-full h-full rounded-md overflow-hidden border border-border/30 shadow-md bg-white flex items-stretch cursor-pointer group/viewport"
+                        title={project.link}
+                        className="text-[10px] text-foreground/45 hover:text-primary font-mono truncate max-w-[180px] bg-background/60 hover:bg-background/90 px-3 py-0.5 rounded-full border border-border/20 hover:border-primary/30 shadow-inner transition-all duration-300 flex items-center gap-1 cursor-pointer"
                       >
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-contain object-top group-hover/viewport:scale-[1.03] transition-all duration-500 ease-out"
-                          loading="lazy"
-                        />
-                      </a>
-                    </div>
-                  )}
-
-                  <div className="p-5 sm:p-6 pb-3">
-                    <h3 className="text-xl sm:text-2xl font-black text-foreground mb-2 group-hover:text-primary transition-colors duration-300 line-clamp-1 sm:line-clamp-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-foreground/75 mb-3 text-xs sm:text-sm leading-relaxed text-left line-clamp-2">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-1.5">
-                      {project.tags.map((tag, j) => (
-                        <span
-                          key={j}
-                          className="text-[10px] px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold uppercase tracking-wider"
-                        >
-                          {tag}
+                        <span className="truncate">
+                          {project.link.replace('https://', '').replace('www.', '')}
                         </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                      </a>
 
-                <div className="p-5 sm:p-6 pt-0 pb-5">
-                  <AnimatedButton href={project.link} variant="outline" size="sm" className="w-full sm:w-auto">
-                    View Website ↗
-                  </AnimatedButton>
+                      <div className="w-6" /> {/* alignment spacer */}
+                    </div>
+
+                    {/* Screenshot viewport - Natural 16:10 aspect ratio */}
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={`Visit ${project.title} live website`}
+                      className="relative w-full aspect-[16/10] rounded-md overflow-hidden border border-border/30 shadow-md bg-white block cursor-pointer group/viewport"
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover object-top group-hover/viewport:scale-[1.03] transition-all duration-500 ease-out"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+                )}
+
+                <div className="p-5 sm:p-6 flex flex-col">
+                  <h3 className="text-xl sm:text-2xl font-black text-foreground mb-2 group-hover:text-primary transition-colors duration-300 line-clamp-1 sm:line-clamp-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-foreground/75 mb-3 text-xs sm:text-sm leading-relaxed text-left line-clamp-2">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {project.tags.map((tag, j) => (
+                      <span
+                        key={j}
+                        className="text-[10px] px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold uppercase tracking-wider"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div>
+                    <AnimatedButton href={project.link} variant="outline" size="sm" className="w-full sm:w-auto">
+                      View Website ↗
+                    </AnimatedButton>
+                  </div>
                 </div>
               </AnimatedCard>
             ))}
