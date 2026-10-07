@@ -22,7 +22,7 @@ export default function Home() {
     {
       title: 'Parle Bangladesh',
       description: 'Official E-Commerce Store of Parle Bangladesh. A premium digital showcase and brand experience for the iconic snack brand in Bangladesh, representing the original Parle Products of India with high-fidelity performance and animations.',
-      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Premium Brand UI'],
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Brand UI'],
       link: 'https://parlebangladesh.com',
       image: '/screenshots/parle.png',
     },
@@ -50,14 +50,14 @@ export default function Home() {
     {
       title: 'Approlio',
       description: 'Intelligent 1-tap social media content automation platform. Monitors viral video creators 24/7 across Facebook, TikTok, and YouTube, dispatching instant Telegram bot previews with 1-tap mobile approval to automatically cross-post to Facebook Pages & YouTube Shorts.',
-      tags: ['Next.js', 'TypeScript', 'Telegram Bot API', 'Social Media Automation', 'SaaS Platform'],
+      tags: ['Next.js', 'TypeScript', 'Telegram Bot API', 'Automation', 'SaaS Platform'],
       link: 'https://approlio.vercel.app',
       image: '/screenshots/approlio.png',
     },
     {
       title: 'BD CacheX',
       description: 'Enterprise CDN edge caching and bandwidth optimization platform built for Bangladesh ISPs, IIGs, and Datacenters. Centrally manages and partitions Google GGC, Meta FNA, Netflix OCA, Cloudflare, and Akamai edge caches, reducing upstream IP transit costs by up to 80% with sub-4ms local latency.',
-      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'CDN Edge Caching', 'ISP Solutions'],
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Edge CDN', 'ISP Solutions'],
       link: 'https://bd-cache-x.vercel.app',
       image: '/screenshots/bd-cachex.png',
     },
@@ -329,9 +329,9 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16 max-w-6xl mx-auto items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16 max-w-6xl mx-auto">
             {projects.map((project, i) => (
-              <AnimatedCard key={i} delay={i * 0.08} variant="gradient" className="overflow-hidden !p-0 group flex flex-col border border-border/50 hover:border-primary/40 transition-colors duration-300">
+              <AnimatedCard key={i} delay={i * 0.08} variant="gradient" className="overflow-hidden !p-0 group h-full flex flex-col justify-between border border-border/50 hover:border-primary/40 transition-colors duration-300">
                 {/* Website live preview frame */}
                 {project.image && (
                   <div className="relative w-full overflow-hidden bg-background-secondary/60 border-b border-border/30 flex flex-col justify-stretch p-3 pt-9">
@@ -377,26 +377,28 @@ export default function Home() {
                   </div>
                 )}
 
-                <div className="p-5 sm:p-6 flex flex-col">
-                  <h3 className="text-xl sm:text-2xl font-black text-foreground mb-2 group-hover:text-primary transition-colors duration-300 line-clamp-1 sm:line-clamp-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-foreground/75 mb-3 text-xs sm:text-sm leading-relaxed text-left line-clamp-2">
-                    {project.description}
-                  </p>
+                <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between">
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-black text-foreground mb-2 group-hover:text-primary transition-colors duration-300 line-clamp-1 sm:line-clamp-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-foreground/75 mb-3 text-xs sm:text-sm leading-relaxed text-left line-clamp-2">
+                      {project.description}
+                    </p>
 
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {project.tags.map((tag, j) => (
-                      <span
-                        key={j}
-                        className="text-[10px] px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold uppercase tracking-wider"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {project.tags.map((tag, j) => (
+                        <span
+                          key={j}
+                          className="text-[10px] px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold uppercase tracking-wider"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
-                  <div>
+                  <div className="pt-1">
                     <AnimatedButton href={project.link} variant="outline" size="sm" className="w-full sm:w-auto">
                       View Website ↗
                     </AnimatedButton>
