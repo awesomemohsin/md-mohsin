@@ -33,6 +33,27 @@ export default function Home() {
       link: 'https://www.deltasoftwareandcommunication.com',
       image: '/screenshots/delta.png',
     },
+    {
+      title: 'Fitself Nutrition',
+      description: 'Official e-commerce storefront for Bangladesh’s premier sports nutrition and authentic imported supplements brand. Engineered with verified QR hologram badges, real-time cart handling, interactive category navigation, and nationwide delivery tracking.',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'E-Commerce Store'],
+      link: 'https://fitself-nutrition.vercel.app',
+      image: '/screenshots/fitself.png',
+    },
+    {
+      title: 'Approlio',
+      description: 'Intelligent 1-tap social media content automation platform. Monitors viral video creators 24/7 across Facebook, TikTok, and YouTube, dispatching instant Telegram bot previews with 1-tap mobile approval to automatically cross-post to Facebook Pages & YouTube Shorts.',
+      tags: ['Next.js', 'TypeScript', 'Telegram Bot API', 'Social Media Automation', 'SaaS Platform'],
+      link: 'https://approlio.vercel.app',
+      image: '/screenshots/approlio.png',
+    },
+    {
+      title: 'BD CacheX',
+      description: 'Enterprise CDN edge caching and bandwidth optimization platform built for Bangladesh ISPs, IIGs, and Datacenters. Centrally manages and partitions Google GGC, Meta FNA, Netflix OCA, Cloudflare, and Akamai edge caches, reducing upstream IP transit costs by up to 80% with sub-4ms local latency.',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'CDN Edge Caching', 'ISP Solutions'],
+      link: 'https://bd-cache-x.vercel.app',
+      image: '/screenshots/bd-cachex.png',
+    },
   ]
 
   const skills = [
@@ -415,7 +436,7 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-10 text-left">
               {/* WhatsApp Card */}
               <a
-                href="https://wa.me/8801958113265"
+                href="https://wa.me/+8801881169880"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block"
@@ -433,7 +454,7 @@ export default function Home() {
                   </div>
                   <div className="text-xs text-foreground/50 uppercase tracking-wider font-semibold mb-1">WhatsApp</div>
                   <div className="font-bold text-foreground group-hover:text-primary transition-colors text-sm sm:text-base truncate">
-                    +8801958113265
+                    +8801881169880
                   </div>
                   <div className="text-xs text-[#25D366] font-bold uppercase tracking-wider mt-3 flex items-center gap-1">
                     Chat Directly ↗
