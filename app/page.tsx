@@ -365,12 +365,12 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer"
                       title={`Visit ${project.title} live website`}
-                      className="relative w-full aspect-[16/10] rounded-md overflow-hidden border border-border/30 shadow-md bg-white block cursor-pointer group/viewport"
+                      className="relative w-full aspect-video sm:aspect-[16/10] rounded-md overflow-hidden border border-border/30 shadow-md bg-white block cursor-pointer group/viewport"
                     >
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover object-top group-hover/viewport:scale-[1.03] transition-all duration-500 ease-out"
+                        className="w-full h-full object-contain object-top group-hover/viewport:scale-[1.03] transition-all duration-500 ease-out"
                         loading="lazy"
                       />
                     </a>
