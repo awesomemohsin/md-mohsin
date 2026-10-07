@@ -335,7 +335,7 @@ export default function Home() {
                 <div>
                   {/* Website live preview frame */}
                   {project.image && (
-                    <div className="relative w-full h-52 sm:h-60 overflow-hidden bg-background-secondary/60 border-b border-border/30 flex flex-col justify-stretch p-3 pt-9">
+                    <div className="relative w-full h-44 sm:h-52 overflow-hidden bg-background-secondary/60 border-b border-border/30 flex flex-col justify-stretch p-3 pt-9">
                       {/* Browser mockup header */}
                       <div className="absolute top-0 left-0 right-0 h-7 bg-card border-b border-border/20 flex items-center justify-between px-3.5 z-20 shadow-sm">
                         <div className="flex items-center gap-1.5">
@@ -378,28 +378,28 @@ export default function Home() {
                     </div>
                   )}
 
-                  <div className="p-6 sm:p-7 pb-2">
-                    <h3 className="text-xl sm:text-2xl font-black text-foreground mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                  <div className="p-5 sm:p-6 pb-3">
+                    <h3 className="text-xl sm:text-2xl font-black text-foreground mb-2 group-hover:text-primary transition-colors duration-300 line-clamp-1 sm:line-clamp-2">
                       {project.title}
                     </h3>
-                    <p className="text-foreground/75 mb-4 text-xs sm:text-sm leading-relaxed text-left line-clamp-3">
+                    <p className="text-foreground/75 mb-3 text-xs sm:text-sm leading-relaxed text-left line-clamp-2">
                       {project.description}
                     </p>
+
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.tags.map((tag, j) => (
+                        <span
+                          key={j}
+                          className="text-[10px] px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold uppercase tracking-wider"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-6 sm:p-7 pt-0">
-                  <div className="flex flex-wrap gap-1.5 mb-6">
-                    {project.tags.map((tag, j) => (
-                      <span
-                        key={j}
-                        className="text-[10px] px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold uppercase tracking-wider"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
+                <div className="p-5 sm:p-6 pt-0 pb-5">
                   <AnimatedButton href={project.link} variant="outline" size="sm" className="w-full sm:w-auto">
                     View Website ↗
                   </AnimatedButton>
