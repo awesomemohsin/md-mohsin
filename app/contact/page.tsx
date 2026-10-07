@@ -11,8 +11,8 @@ export default function ContactPage() {
     {
       type: 'whatsapp',
       label: 'WhatsApp Chat',
-      value: '+8801958113265',
-      href: 'https://wa.me/8801958113265',
+      value: '+8801881169880',
+      href: 'https://wa.me/+8801881169880',
       glowColor: 'hover:border-[#25D366]/40'
     },
     {
