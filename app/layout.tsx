@@ -26,6 +26,11 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  verification: {
+    other: {
+      'trustpilot-one-time-domain-verification-id': 'b610590f-41ba-4c28-ace7-77f2ffaf87e6',
+    },
+  },
   openGraph: {
     title: 'Md Mohsin | Software Engineer & Full-Stack Developer',
     description: 'Portfolio of Md Mohsin, a Software Engineering M.Sc. candidate and Full-Stack Developer specializing in high-performance web systems and conversion-optimized digital growth strategy.',
