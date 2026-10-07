@@ -34,6 +34,13 @@ export default function Home() {
       image: '/screenshots/delta.png',
     },
     {
+      title: 'Blance - E-Commerce',
+      description: 'A modern, high-performance fashion e-commerce storefront built for a premium clothing brand. Features a sleek product catalog, intuitive shopping experience, dynamic filtering, and a seamless checkout flow.',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'E-Commerce'],
+      link: 'https://blance-ecommerce.vercel.app',
+      image: '/screenshots/blance.png',
+    },
+    {
       title: 'Fitself Nutrition',
       description: 'Official e-commerce storefront for Bangladesh’s premier sports nutrition and authentic imported supplements brand. Engineered with verified QR hologram badges, real-time cart handling, interactive category navigation, and nationwide delivery tracking.',
       tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'E-Commerce Store'],
@@ -322,90 +329,83 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="flex flex-col gap-12 sm:gap-16 mb-16 max-w-5xl mx-auto">
-            {projects.map((project, i) => {
-              const isEven = i % 2 === 1
-              return (
-                <AnimatedCard key={i} delay={i * 0.15} variant="gradient" className="overflow-hidden !p-0 group">
-                  <div className={`flex flex-col ${isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-stretch`}>
-                    {/* Website live preview frame */}
-                    {project.image && (
-                      <div className={`relative w-full lg:w-1/2 min-h-[260px] lg:min-h-[380px] overflow-hidden bg-background-secondary/60 border-b lg:border-b-0 ${isEven ? 'lg:border-l' : 'lg:border-r'} border-border/30 flex flex-col justify-stretch p-4 pt-12`}>
-                        {/* Browser mockup header */}
-                        <div className="absolute top-0 left-0 right-0 h-8 bg-card border-b border-border/20 flex items-center justify-between px-4 z-20 shadow-sm">
-                          <div className="flex items-center gap-1.5">
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] opacity-90 shadow-sm" />
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] opacity-90 shadow-sm" />
-                            <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F] opacity-90 shadow-sm" />
-                          </div>
-
-                          {/* Interactive address bar that expands and links */}
-                          <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title={project.link}
-                            className="text-[10px] text-foreground/45 hover:text-primary font-mono truncate max-w-[200px] hover:max-w-md bg-background/60 hover:bg-background/90 px-4 py-0.5 rounded-full border border-border/20 hover:border-primary/30 shadow-inner transition-all duration-300 group/url flex items-center gap-1 cursor-pointer"
-                          >
-                            <span className="truncate group-hover/url:hidden">
-                              {project.link.replace('https://', '').replace('www.', '')}
-                            </span>
-                            <span className="hidden group-hover/url:inline truncate">
-                              {project.link}
-                            </span>
-                          </a>
-
-                          <div className="w-12" /> {/* alignment spacer */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16 max-w-6xl mx-auto">
+            {projects.map((project, i) => (
+              <AnimatedCard key={i} delay={i * 0.08} variant="gradient" className="overflow-hidden !p-0 group h-full flex flex-col justify-between">
+                <div>
+                  {/* Website live preview frame */}
+                  {project.image && (
+                    <div className="relative w-full h-52 sm:h-60 overflow-hidden bg-background-secondary/60 border-b border-border/30 flex flex-col justify-stretch p-3 pt-9">
+                      {/* Browser mockup header */}
+                      <div className="absolute top-0 left-0 right-0 h-7 bg-card border-b border-border/20 flex items-center justify-between px-3.5 z-20 shadow-sm">
+                        <div className="flex items-center gap-1.5">
+                          <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] opacity-90 shadow-sm" />
+                          <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] opacity-90 shadow-sm" />
+                          <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F] opacity-90 shadow-sm" />
                         </div>
 
-                        {/* Screenshot viewport - Clickable link to live website */}
+                        {/* Interactive address bar that links to live website */}
                         <a
                           href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          title={`Visit ${project.title} live website`}
-                          className="relative w-full h-full rounded-lg overflow-hidden border border-border/30 shadow-lg bg-white flex items-stretch cursor-pointer group/viewport"
+                          title={project.link}
+                          className="text-[10px] text-foreground/45 hover:text-primary font-mono truncate max-w-[180px] bg-background/60 hover:bg-background/90 px-3 py-0.5 rounded-full border border-border/20 hover:border-primary/30 shadow-inner transition-all duration-300 flex items-center gap-1 cursor-pointer"
                         >
-                          <img
-                            src={project.image}
-                            alt={project.title}
-                            className="w-full h-full object-contain object-top group-hover:scale-[1.02] transition-all duration-700 ease-out"
-                            loading="lazy"
-                          />
+                          <span className="truncate">
+                            {project.link.replace('https://', '').replace('www.', '')}
+                          </span>
                         </a>
-                      </div>
-                    )}
 
-                    <div className="lg:w-1/2 p-6 sm:p-8 md:p-10 flex flex-col justify-between">
-                      <div>
-                        <h3 className="text-2xl font-black text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
-                          {project.title}
-                        </h3>
-                        <p className="text-foreground/75 mb-6 text-sm sm:text-base leading-relaxed text-left">
-                          {project.description}
-                        </p>
+                        <div className="w-6" /> {/* alignment spacer */}
                       </div>
 
-                      <div>
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {project.tags.map((tag, j) => (
-                            <span
-                              key={j}
-                              className="text-[10px] px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold uppercase tracking-wider"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        <AnimatedButton href={project.link} variant="outline" size="sm" className="w-full sm:w-auto">
-                          View Website ↗
-                        </AnimatedButton>
-                      </div>
+                      {/* Screenshot viewport - Clickable link to live website */}
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={`Visit ${project.title} live website`}
+                        className="relative w-full h-full rounded-md overflow-hidden border border-border/30 shadow-md bg-white flex items-stretch cursor-pointer group/viewport"
+                      >
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-contain object-top group-hover/viewport:scale-[1.03] transition-all duration-500 ease-out"
+                          loading="lazy"
+                        />
+                      </a>
                     </div>
+                  )}
+
+                  <div className="p-6 sm:p-7 pb-2">
+                    <h3 className="text-xl sm:text-2xl font-black text-foreground mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-foreground/75 mb-4 text-xs sm:text-sm leading-relaxed text-left line-clamp-3">
+                      {project.description}
+                    </p>
                   </div>
-                </AnimatedCard>
-              )
-            })}
+                </div>
+
+                <div className="p-6 sm:p-7 pt-0">
+                  <div className="flex flex-wrap gap-1.5 mb-6">
+                    {project.tags.map((tag, j) => (
+                      <span
+                        key={j}
+                        className="text-[10px] px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold uppercase tracking-wider"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <AnimatedButton href={project.link} variant="outline" size="sm" className="w-full sm:w-auto">
+                    View Website ↗
+                  </AnimatedButton>
+                </div>
+              </AnimatedCard>
+            ))}
           </div>
 
           <div className="text-center">
