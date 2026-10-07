@@ -21,13 +21,14 @@ interface Project {
   image: string
 }
 
-export default function ProjectsPage() {
-  const [activeCategory, setActiveCategory] = useState('all')
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+const CATEGORIES = [
+  { id: 'all', label: 'All Work' },
+  { id: 'telecom', label: 'Telecom & ISP' },
+  { id: 'ecommerce', label: 'E-Commerce' },
+  { id: 'saas', label: 'SaaS & Automation' },
+] as const
 
-  const categories = ['all', 'telecom', 'ecommerce', 'saas']
-
-  const projects: Project[] = [
+const PROJECTS: Project[] = [
     {
       id: 1,
       title: 'Circle Network',
@@ -107,6 +108,10 @@ export default function ProjectsPage() {
     },
   ]
 
+export default function ProjectsPage() {
+  const [activeCategory, setActiveCategory] = useState<string>('all')
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+
   // Lock body scroll and listen for Escape key when modal is open
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -129,8 +134,8 @@ export default function ProjectsPage() {
   }, [selectedProject])
 
   const filtered = activeCategory === 'all'
-    ? projects
-    : projects.filter(p => p.category === activeCategory)
+    ? PROJECTS
+    : PROJECTS.filter(p => p.category === activeCategory)
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -191,26 +196,18 @@ export default function ProjectsPage() {
       <section className="relative px-4 sm:px-6 lg:px-8 py-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map((cat) => (
+            {CATEGORIES.map((cat) => (
               <motion.button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-lg capitalize font-bold text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer ${activeCategory === cat.id
                   ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/30 border border-primary'
                   : 'bg-card border border-border text-foreground hover:border-primary/50'
                   }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {cat === 'all'
-                  ? 'All Work'
-                  : cat === 'telecom'
-                    ? 'Telecom & ISP'
-                    : cat === 'ecommerce'
-                      ? 'E-Commerce'
-                      : cat === 'saas'
-                        ? 'SaaS & Automation'
-                        : cat}
+                {cat.label}
               </motion.button>
             ))}
           </div>
